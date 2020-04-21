@@ -45,7 +45,7 @@ int peek(stack s){
 //displays elements from top
 void display(stack s){
 	int i;
-	if(s.top == 0){
+	if(s.top == -1){
 		printf("Empty\n");
 	}
 	for(i =s.top;i>-1;i--){
