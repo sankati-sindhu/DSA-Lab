@@ -14,12 +14,12 @@ void enqueue(int *queue, int *rear,int *front){
     //inserts a element in rear
     int ele;
     printf("Enter the element to insert");
+    scanf("%d",&ele);
     if (*rear == -1)
     {
         *front = 0;
     }
     *rear += 1;
-    scanf("%d",&ele);
     *(queue+*rear) = ele;
     
 }
