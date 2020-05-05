@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define max 1000
 //globally initalized stack
-char stack[max],top = -1;
+char stack[max]; int top = -1;
 
 //function which return the top element of the global stack
 char pop(){
@@ -18,7 +18,7 @@ char pop(){
 //fuction pushes <char> data into the global stack
 void push(char data){
 	//overflow condition
-	if(top != max-1)
+	if(top == max-1)
 		printf("overflow\n");
 	top++;
 	stack[top] = data;
