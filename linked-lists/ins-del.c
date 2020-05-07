@@ -83,7 +83,7 @@ node* deleteBeg(node *head){
 
 //deletes the last last node(not recursive)
 node* deleteEnd(node *head){
-	node *ptr = head;
+
 	//if empty list return NULL
 	if(head == NULL ){
 		printf("empty\n");
@@ -92,18 +92,12 @@ node* deleteEnd(node *head){
 	//if a single element returns NULL
 	if (head->next == NULL){
 		printf("%d deleted\n",head->data );
+		free(head);
 		return NULL;
 	}
-	//runs till the last element
-	while(head->next != NULL){
-		head = head->next;
-	}
 	//last node deleted
-	node *temp = head;
-	printf("%d deleted\n",temp->data);
-	free(temp);
-	head = NULL;
-	return ptr;
+	head->next = deleteEnd(head->next);
+	return head;
 }
 
 //displays the list

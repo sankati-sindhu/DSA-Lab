@@ -81,6 +81,8 @@ void in2post(char* exp) {
 int main() { 
 	//driver code
 	char exp[] = "a+b*(c^d)+(e-f/g)*c+d"; 
+	printf( "Infix- expression: %s\n", exp ); 
+	printf("%s","postfix expression:" );
 	in2post(exp); 
 	return 0; 
 } 

@@ -147,11 +147,13 @@ int main(){
 	//example "34 45 *23 +/" is valid
 	//"3 4 5 * 5 / -" is invalid
 	char exp[] = "7 8 +3 2 +/";
+	printf("expression = %s\n",exp);
 	evaluatePost(exp);
 	//expression for post should have space before every number and no space anywhere else
 	//example " 34 45* 23+/" is valid
 	//" 3 4 5 * 5 / - " is invalid
 	char exp2[] = "+ 9* 2 6";
+	printf("expression = %s\n",exp2);
 	evaluatePre(exp2);
 	return 0;
 }

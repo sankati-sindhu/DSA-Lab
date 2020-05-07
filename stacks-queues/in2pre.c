@@ -88,6 +88,8 @@ void in2pre(char* exp) {
 int main() { 
 	//driver code
 	char exp[] = "(a-b/c)*(a/k-l)"; 
+	printf( "Infix- expression: %s\n", exp ); 
+	printf("%s","prefix expression:" );
 	in2pre(exp); 
 	return 0; 
 } 

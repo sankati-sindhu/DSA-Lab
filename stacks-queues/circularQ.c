@@ -25,11 +25,11 @@ void enqueue(int *queue, int *rear,int *front){
 }
 
 //displays elements from front to back of circular queue
-void display(int *queue, int rear, int front){
+void display(int queue[], int rear, int front){
     int i;
     printf("now queue (front.....to .....back:)\n");
     for(i=(front);i!=rear;i= (i+1)%MAX_SIZE){
-        printf("%d ",*(queue+i));
+        printf("%d ",queue[i]);
     }
 }
 
@@ -60,7 +60,7 @@ int main(){
         //does according to option choosed
         switch(ans){
             case 1: enqueue(queue, &rear, &front);break;
-            case 2: dequeue(queue,&front,&rear);break;
+            case 2: dequeue(queue, &front,&rear);break;
             case 3: display(queue, rear, front);break;
             case 4: exit(0);break;
 
