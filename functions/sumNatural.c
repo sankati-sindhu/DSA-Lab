@@ -6,7 +6,7 @@ int sum_natural(int n){
 
  	//loops runs from 1 to n
  	for(i=1;i<=n;i++)
- 		sum += n;
+ 		sum += i;
  	return sum;
 }
 int main(int argc, char const *argv[]){
