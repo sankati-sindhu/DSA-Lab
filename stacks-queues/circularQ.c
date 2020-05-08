@@ -31,6 +31,7 @@ void display(int queue[], int rear, int front){
     for(i=(front);i!=rear;i= (i+1)%MAX_SIZE){
         printf("%d ",queue[i]);
     }
+    printf("%d ",queue[i]);
 }
 
 //deletes a element form front of circular queue

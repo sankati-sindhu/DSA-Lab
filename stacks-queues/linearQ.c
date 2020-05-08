@@ -2,6 +2,17 @@
 #include <stdlib.h>
 # define MAX_SIZE 100
 
+
+
+//displays elements from front to back
+void display(int *queue, int rear, int front){
+    int i;
+    printf("now queue (front.....to .....back:)\n");
+    for(i=front;i<rear;i++){
+        printf("%d ",*(queue+i));
+    }
+    printf("%d ",*(queue+rear));
+}
 //adding a eleemt into the queue
 void enqueue(int *queue, int *rear,int *front){
 
@@ -22,16 +33,6 @@ void enqueue(int *queue, int *rear,int *front){
     *rear += 1;
     *(queue+*rear) = ele;
     
-}
-
-//displays elements from front to back
-void display(int *queue, int rear, int front){
-    int i;
-    printf("now queue (front.....to .....back:)\n");
-    for(i=front;i<rear;i++){
-        printf("%d ",*(queue+i));
-    }
-    printf("%d ",*(queue+rear));
 }
 
 //deletes a element form front
