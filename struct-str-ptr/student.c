@@ -20,20 +20,25 @@ int main()
 	student s[5];
 	int i;
 	//inputtting the details of 5 students
-	printf("Enter details: ");
+	printf("Enter details: \n");
 	for(i=0;i<5;i++){
 		printf("Enter\n");
 		printf("Name");
-		scanf("%[^/n]",&s[i].name);
+		scanf("%s",s[i].name);
 
 		printf("Admin No: ");
 		scanf("%d",&s[i].adminNo);
 
-		printf("Date of Birth: ");
-		scanf("%d%d%d",&s[i].DOB.day,&s[i].DOB.month,&s[i].DOB.year);
+		printf("Date of Birth:\n");
+		printf("Date: ");
+		scanf("%d",&s[i].DOB.day);
+		printf("Month: ");
+		scanf("%d",&s[i].DOB.month);
+		printf("year: ");
+		scanf("%d",&s[i].DOB.year);
 
 		printf("Department: ");
-		scanf("%[^/n]",&s.[i].dept);
+		scanf("%s",s[i].dept);
 	}
 
 	//printing details of five students
@@ -44,4 +49,5 @@ int main()
 		printf("Date of Birth: %d/%d/%d\n",s[i].DOB.day,s[i].DOB.month,s[i].DOB.year);
 		printf("Department: %s\n\n",s[i].dept);
 	}
+	return 0;
 }
